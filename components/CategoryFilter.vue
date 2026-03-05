@@ -44,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    padding: 16px 16px 0;
+    padding: 16px 16px;
   }
 
   @media (max-width: 768px) {
