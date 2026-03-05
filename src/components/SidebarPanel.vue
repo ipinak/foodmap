@@ -94,8 +94,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: #f7f7f5;
-    border-right: 1px solid #e8e8e6;
+    background: var(--fm-surface);
+    border-right: 1px solid var(--fm-border);
     overflow: hidden;
   }
 
@@ -105,13 +105,13 @@
       min-width: unset;
       height: 55vh;
       border-right: none;
-      border-top: 1px solid #e8e8e6;
+      border-top: 1px solid var(--fm-border);
     }
   }
 
   .sidebar__header {
     padding: 20px 16px 12px;
-    border-bottom: 1px solid #e8e8e6;
+    border-bottom: 1px solid var(--fm-border);
     flex-shrink: 0;
   }
 
@@ -126,20 +126,20 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #e74c3c;
+    background: var(--fm-accent);
   }
 
   .sidebar__brand-name {
     font-size: 20px;
     font-weight: 800;
-    color: #111;
+    color: var(--fm-text);
     letter-spacing: -0.5px;
   }
 
   .sidebar__subtitle {
     margin: 0;
     font-size: 13px;
-    color: #888;
+    color: var(--fm-text-secondary);
   }
 
   .sidebar__list {
@@ -150,7 +150,7 @@
     flex-direction: column;
     gap: 16px;
     scrollbar-width: thin;
-    scrollbar-color: #ddd transparent;
+    scrollbar-color: var(--fm-scrollbar) transparent;
   }
 
   .sidebar__list::-webkit-scrollbar {
@@ -162,7 +162,7 @@
   }
 
   .sidebar__list::-webkit-scrollbar-thumb {
-    background: #ddd;
+    background: var(--fm-scrollbar);
     border-radius: 4px;
   }
 

@@ -7,8 +7,9 @@
           height="36"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#E74C3C"
+          stroke="currentColor"
           stroke-width="1.5"
+          style="color: var(--fm-accent)"
         >
           <circle cx="12" cy="12" r="10" />
           <line x1="12" y1="8" x2="12" y2="12" />
@@ -271,13 +272,13 @@
   .mapbox-popup-name {
     font-size: 14px;
     font-weight: 700;
-    color: #111;
+    color: var(--fm-text);
     line-height: 1.3;
   }
 
   .mapbox-popup-addr {
     font-size: 11px;
-    color: #888;
+    color: var(--fm-text-secondary);
     line-height: 1.4;
   }
 
@@ -285,8 +286,8 @@
     margin-top: 6px;
     align-self: flex-start;
     padding: 5px 12px;
-    background: #111;
-    color: #fff;
+    background: var(--fm-interactive);
+    color: var(--fm-bg);
     border: none;
     border-radius: 6px;
     font-size: 12px;
@@ -296,7 +297,7 @@
   }
 
   .mapbox-popup-details-btn:hover {
-    background: #333;
+    background: var(--fm-text);
   }
 
   /* Custom marker */
@@ -325,7 +326,7 @@
   }
 
   .poi-marker--selected .poi-marker__dot {
-    border-color: #111;
+    border-color: var(--fm-interactive);
     border-width: 3px;
   }
 </style>
@@ -368,14 +369,14 @@
   .map-no-token {
     width: 100%;
     height: 100%;
-    background: #f0ede8;
+    background: var(--fm-surface);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .map-no-token__card {
-    background: #fff;
+    background: var(--fm-bg);
     border-radius: 16px;
     padding: 32px 36px;
     max-width: 400px;
@@ -387,28 +388,28 @@
     margin: 12px 0 8px;
     font-size: 18px;
     font-weight: 700;
-    color: #111;
+    color: var(--fm-text);
   }
 
   .map-no-token__card p {
     font-size: 14px;
-    color: #555;
+    color: var(--fm-text-muted);
     margin: 0 0 10px;
   }
 
   .map-no-token__card pre {
-    background: #f5f5f5;
+    background: var(--fm-surface);
     border-radius: 8px;
     padding: 10px 14px;
     font-size: 12px;
-    color: #333;
+    color: var(--fm-text-muted);
     text-align: left;
     margin: 0 0 16px;
     overflow-x: auto;
   }
 
   .map-no-token__card code {
-    background: #f0f0f0;
+    background: var(--fm-border);
     padding: 1px 5px;
     border-radius: 4px;
     font-size: 13px;
@@ -417,8 +418,8 @@
   .map-no-token__card a {
     display: inline-block;
     padding: 8px 20px;
-    background: #111;
-    color: #fff;
+    background: var(--fm-interactive);
+    color: var(--fm-bg);
     border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
@@ -426,6 +427,6 @@
   }
 
   .map-no-token__card a:hover {
-    background: #333;
+    background: var(--fm-text);
   }
 </style>

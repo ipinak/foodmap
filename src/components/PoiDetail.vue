@@ -121,7 +121,7 @@
 
   .detail-panel {
     position: relative;
-    background: #fff;
+    background: var(--fm-bg);
     border-radius: 16px;
     overflow: hidden;
     width: 100%;
@@ -186,7 +186,7 @@
     margin: 0 0 14px;
     font-size: 24px;
     font-weight: 800;
-    color: #111;
+    color: var(--fm-text);
     letter-spacing: -0.5px;
   }
 
@@ -202,20 +202,20 @@
     align-items: flex-start;
     gap: 8px;
     font-size: 13px;
-    color: #666;
+    color: var(--fm-text-muted);
     line-height: 1.5;
   }
 
   .detail-panel__meta-item svg {
     flex-shrink: 0;
     margin-top: 2px;
-    color: #999;
+    color: var(--fm-text-subtle);
   }
 
   .detail-panel__desc {
     font-size: 15px;
     line-height: 1.7;
-    color: #444;
+    color: var(--fm-text-muted);
     margin: 0 0 20px;
   }
 
@@ -224,8 +224,8 @@
     align-items: center;
     gap: 7px;
     padding: 10px 20px;
-    background: #111;
-    color: #fff;
+    background: var(--fm-interactive);
+    color: var(--fm-bg);
     border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
@@ -234,7 +234,7 @@
   }
 
   .detail-panel__gmaps-btn:hover {
-    background: #333;
+    background: var(--fm-text);
   }
 
   /* Transition */

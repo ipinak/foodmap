@@ -64,9 +64,9 @@
   .filter-chip {
     padding: 5px 14px;
     border-radius: 20px;
-    border: 1.5px solid #d0d0d0;
-    background: #fff;
-    color: #555;
+    border: 1.5px solid var(--fm-border-chip);
+    background: var(--fm-bg);
+    color: var(--fm-text-muted);
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
@@ -79,8 +79,8 @@
   }
 
   .filter-chip.active {
-    color: #fff;
+    color: var(--fm-bg);
     border-color: transparent;
-    background: #222;
+    background: var(--fm-chip-active, var(--fm-interactive));
   }
 </style>

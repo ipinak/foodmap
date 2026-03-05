@@ -63,7 +63,7 @@
 
 <style scoped>
   .poi-card {
-    background: #fff;
+    background: var(--fm-bg);
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -80,7 +80,7 @@
   }
 
   .poi-card.selected {
-    border-color: #222;
+    border-color: var(--fm-interactive);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
   }
 
@@ -140,7 +140,7 @@
     margin: 0 0 6px;
     font-size: 16px;
     font-weight: 700;
-    color: #111;
+    color: var(--fm-text);
     line-height: 1.3;
   }
 
@@ -150,13 +150,13 @@
     gap: 5px;
     margin: 0 0 8px;
     font-size: 12px;
-    color: #888;
+    color: var(--fm-text-secondary);
   }
 
   .poi-card__desc {
     margin: 0 0 12px;
     font-size: 13px;
-    color: #555;
+    color: var(--fm-text-muted);
     line-height: 1.55;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -166,8 +166,8 @@
 
   .poi-card__cta {
     background: none;
-    border: 1.5px solid #222;
-    color: #222;
+    border: 1.5px solid var(--fm-interactive);
+    color: var(--fm-interactive);
     border-radius: 6px;
     padding: 6px 14px;
     font-size: 12px;
@@ -179,7 +179,7 @@
   }
 
   .poi-card__cta:hover {
-    background: #222;
-    color: #fff;
+    background: var(--fm-interactive);
+    color: var(--fm-bg);
   }
 </style>

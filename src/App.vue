@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" :class="themeClass" :style="themeVars">
     <!-- Mobile-only top header -->
     <header class="app-mobile-header">
       <div class="app-mobile-header__brand">
@@ -47,6 +47,54 @@
 
   const { t, locale } = useI18n();
   const { pois, fetchPois, getCategories, filterByCategory } = usePois();
+
+  // ── Theme ─────────────────────────────────────────────
+  // `theme` accepts either:
+  //   • A preset name string  → applies the matching CSS class (.theme-<name>)
+  //   • A plain object        → inlines individual CSS custom properties
+  //
+  // Built-in presets: 'redbull'
+  //
+  // Examples:
+  //   window.FoodMapConfig = { theme: 'redbull' }
+  //   window.FoodMapConfig = { theme: { accent: '#0070f3', interactive: '#0070f3' } }
+  //   <App theme="redbull" />
+  //   <App :theme="{ accent: '#0070f3' }" />
+  const THEME_PROP_MAP = {
+    accent: '--fm-accent',
+    surface: '--fm-surface',
+    background: '--fm-bg',
+    border: '--fm-border',
+    borderInput: '--fm-border-input',
+    borderChip: '--fm-border-chip',
+    text: '--fm-text',
+    textSecondary: '--fm-text-secondary',
+    textMuted: '--fm-text-muted',
+    textSubtle: '--fm-text-subtle',
+    placeholder: '--fm-placeholder',
+    interactive: '--fm-interactive',
+    scrollbar: '--fm-scrollbar',
+  };
+
+  const props = defineProps({
+    // string → preset name; object → token overrides
+    theme: { type: [String, Object], default: () => ({}) },
+  });
+
+  // CSS class applied when `theme` is a preset name string
+  const themeClass = computed(() =>
+    typeof props.theme === 'string' ? `theme-${props.theme}` : null,
+  );
+
+  // Inline vars applied when `theme` is a token-override object
+  const themeVars = computed(() => {
+    if (typeof props.theme !== 'object' || !props.theme) return {};
+    const vars = {};
+    for (const [key, cssVar] of Object.entries(THEME_PROP_MAP)) {
+      if (props.theme[key]) vars[cssVar] = props.theme[key];
+    }
+    return vars;
+  });
 
   const activeCategory = ref(null);
   const selectedPoi = ref(null);
@@ -130,8 +178,8 @@
       order: 0;
       flex: none;
       padding: 10px 16px;
-      background: #f7f7f5;
-      border-bottom: 1px solid #e8e8e6;
+      background: var(--fm-surface);
+      border-bottom: 1px solid var(--fm-border);
     }
 
     .app-mobile-header__brand {
@@ -144,21 +192,21 @@
       width: 9px;
       height: 9px;
       border-radius: 50%;
-      background: #e74c3c;
+      background: var(--fm-accent);
       flex-shrink: 0;
     }
 
     .app-mobile-header__name {
       font-size: 17px;
       font-weight: 800;
-      color: #111;
+      color: var(--fm-text);
       letter-spacing: -0.4px;
     }
 
     .app-mobile-header__subtitle {
       margin: 0;
       font-size: 12px;
-      color: #888;
+      color: var(--fm-text-secondary);
     }
   }
 
