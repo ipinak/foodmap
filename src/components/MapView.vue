@@ -55,6 +55,7 @@
     pois: { type: Array, required: true },
     selectedPoi: { type: Object, default: null },
     searchQuery: { type: String, default: '' },
+    mapStyle: { type: String, default: 'mapbox://styles/mapbox/light-v11' },
   });
 
   defineEmits(['select', 'detail', 'update:searchQuery']);
@@ -159,7 +160,7 @@
 
     map = new mapboxgl.Map({
       container: mapEl.value,
-      style: 'mapbox://styles/mapbox/light-v11',
+      style: props.mapStyle,
       center: [23.7275, 37.9755],
       zoom: 14,
     });
@@ -218,6 +219,31 @@
       if (!poi) return;
       map?.flyTo({ center: [poi.lng, poi.lat], zoom: 15.5, speed: 1.2 });
       openPopup(poi);
+    },
+  );
+
+  // Swap the Mapbox base style when the theme changes; re-add markers afterwards
+  watch(
+    () => props.mapStyle,
+    (newStyle) => {
+      if (!map) return;
+
+      // Remove all current markers before the style swap
+      Object.values(markers).forEach((m) => m.remove());
+      Object.keys(markers).forEach((k) => delete markers[k]);
+      if (activePopup) {
+        activePopup.remove();
+        activePopup = null;
+      }
+
+      map.setStyle(newStyle);
+      map.once('style.load', () => {
+        addMarkers();
+        if (props.selectedPoi) {
+          updateSelectedMarker(props.selectedPoi);
+          openPopup(props.selectedPoi);
+        }
+      });
     },
   );
 </script>
@@ -311,7 +337,7 @@
     width: 16px;
     height: 16px;
     background: var(--cat-color);
-    border: 2.5px solid #fff;
+    border: 2.5px solid var(--fm-bg, #fff);
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     transition:

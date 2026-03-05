@@ -27,6 +27,7 @@
       :pois="filteredPois"
       :selected-poi="selectedPoi"
       :search-query="searchQuery"
+      :map-style="mapStyle"
       @select="selectPoi"
       @detail="openDetail"
       @update:search-query="searchQuery = $event"
@@ -60,6 +61,13 @@
   //   window.FoodMapConfig = { theme: { accent: '#0070f3', interactive: '#0070f3' } }
   //   <App theme="redbull" />
   //   <App :theme="{ accent: '#0070f3' }" />
+
+  // Mapbox style paired to each built-in preset.
+  // Object themes can also supply a `mapStyle` key directly.
+  const PRESET_MAP_STYLES = {
+    redbull: 'mapbox://styles/mapbox/dark-v11',
+  };
+  const DEFAULT_MAP_STYLE = 'mapbox://styles/mapbox/light-v11';
   const THEME_PROP_MAP = {
     accent: '--fm-accent',
     surface: '--fm-surface',
@@ -94,6 +102,13 @@
       if (props.theme[key]) vars[cssVar] = props.theme[key];
     }
     return vars;
+  });
+
+  // Mapbox base style – derived from the preset name or an explicit key in an object theme
+  const mapStyle = computed(() => {
+    if (typeof props.theme === 'string')
+      return PRESET_MAP_STYLES[props.theme] ?? DEFAULT_MAP_STYLE;
+    return props.theme?.mapStyle ?? DEFAULT_MAP_STYLE;
   });
 
   const activeCategory = ref(null);
