@@ -35,12 +35,22 @@
         "
         class="sidebar__list-item"
       >
-        <PoiCard
-          :poi="poi"
-          :is-selected="selectedPoi?.id === poi.id"
-          @select="$emit('select', $event)"
-          @detail="$emit('detail', $event)"
-        />
+        <div class="sidebar__card-desktop">
+          <PoiCard
+            :poi="poi"
+            :is-selected="selectedPoi?.id === poi.id"
+            @select="$emit('select', $event)"
+            @detail="$emit('detail', $event)"
+          />
+        </div>
+        <div class="sidebar__card-mobile">
+          <HorizontalPoiItem
+            :poi="poi"
+            :is-selected="selectedPoi?.id === poi.id"
+            @select="$emit('select', $event)"
+            @detail="$emit('detail', $event)"
+          />
+        </div>
       </div>
       <div v-if="filteredPois.length === 0" class="sidebar__empty">
         {{ t('poi.noResults') }}
@@ -53,6 +63,7 @@
   import { ref, watch } from 'vue';
   import { useI18n } from 'vue-i18n';
   import CategoryFilter from './CategoryFilter.vue';
+  import HorizontalPoiItem from './HorizontalPoiItem.vue';
   import PoiCard from './PoiCard.vue';
   import SearchBar from './SearchBar.vue';
 
@@ -166,25 +177,6 @@
     border-radius: 4px;
   }
 
-  @media (max-width: 768px) {
-    .sidebar__list {
-      flex-direction: row;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 12px 16px 16px;
-      gap: 12px;
-      scrollbar-width: none;
-    }
-
-    .sidebar__list::-webkit-scrollbar {
-      display: none;
-    }
-
-    .sidebar__list-item {
-      flex: 0 0 260px;
-    }
-  }
-
   .sidebar__search {
     display: none;
   }
@@ -193,6 +185,20 @@
     .sidebar__search {
       display: block;
       padding: 10px 16px 0;
+    }
+  }
+
+  .sidebar__card-mobile {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar__card-desktop {
+      display: none;
+    }
+
+    .sidebar__card-mobile {
+      display: block;
     }
   }
 
