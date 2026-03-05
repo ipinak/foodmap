@@ -466,7 +466,7 @@
       "id": "23",
       "name": "Stoa",
       "category": "club",
-      "image": "/images/stoa.athens.bar.jpg",
+      "image": null,
       "description": "Energetic nightclub in central Athens hosting DJs and late-night dance events.",
       "address": "Karagiorgi Servias 10, Athina 105 62",
       "lat": 37.97666946261841,
@@ -511,8 +511,8 @@
       "image": "/images/ekei.webp",
       "description": "Trendy nightlife spot in central Athens known for music, drinks and a vibrant crowd.",
       "address": "Lekka 23, Athina 105 62",
-      "lat": 37.97707478376202,
-      "lng": 23.731698410839403,
+      "lat": null,
+      "lng": null,
       "website": {
         "url": "https://www.instagram.com/ekei.lekka23/?hl=el",
         "type": "instagram"
