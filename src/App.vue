@@ -16,7 +16,9 @@
       :categories="categories"
       :active-category="activeCategory"
       :selected-poi="selectedPoi"
+      :search-query="searchQuery"
       @update:active-category="setCategory"
+      @update:search-query="searchQuery = $event"
       @select="selectPoi"
       @detail="openDetail"
     />
@@ -24,8 +26,10 @@
     <MapView
       :pois="filteredPois"
       :selected-poi="selectedPoi"
+      :search-query="searchQuery"
       @select="selectPoi"
       @detail="openDetail"
+      @update:search-query="searchQuery = $event"
     />
 
     <PoiDetail :poi="detailPoi" @close="detailPoi = null" />
@@ -34,6 +38,7 @@
 
 <script setup>
   import { ref, computed, onMounted } from 'vue';
+  import Fuse from 'fuse.js';
   import SidebarPanel from './components/SidebarPanel.vue';
   import MapView from './components/MapView.vue';
   import PoiDetail from './components/PoiDetail.vue';
@@ -44,11 +49,35 @@
   const activeCategory = ref(null);
   const selectedPoi = ref(null);
   const detailPoi = ref(null);
+  const searchQuery = ref('');
 
   const categories = computed(() => getCategories(pois.value));
-  const filteredPois = computed(() =>
+
+  // Category-filtered pool (no search applied yet)
+  const categoryPois = computed(() =>
     filterByCategory(pois.value, activeCategory.value),
   );
+
+  // Fuse index rebuilt whenever the pool changes
+  const fuse = computed(
+    () =>
+      new Fuse(categoryPois.value, {
+        keys: [
+          { name: 'name', weight: 0.5 },
+          { name: 'address', weight: 0.25 },
+          { name: 'description', weight: 0.25 },
+        ],
+        threshold: 0.35,
+        includeScore: true,
+        minMatchCharLength: 2,
+      }),
+  );
+
+  const filteredPois = computed(() => {
+    const q = searchQuery.value.trim();
+    if (!q) return categoryPois.value;
+    return fuse.value.search(q).map((r) => r.item);
+  });
 
   function setCategory(cat) {
     activeCategory.value = cat;

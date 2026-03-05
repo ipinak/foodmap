@@ -10,6 +10,14 @@
       </p>
     </div>
 
+    <!-- Search bar – mobile only (desktop version floats over the map) -->
+    <div class="sidebar__search">
+      <SearchBar
+        :model-value="searchQuery"
+        @update:model-value="$emit('update:searchQuery', $event)"
+      />
+    </div>
+
     <CategoryFilter
       :categories="categories"
       :model-value="activeCategory"
@@ -45,15 +53,22 @@
   import { ref, watch } from 'vue';
   import CategoryFilter from './CategoryFilter.vue';
   import PoiCard from './PoiCard.vue';
+  import SearchBar from './SearchBar.vue';
 
   const props = defineProps({
     filteredPois: { type: Array, required: true },
+    searchQuery: { type: String, default: '' },
     categories: { type: Array, required: true },
     activeCategory: { type: String, default: null },
     selectedPoi: { type: Object, default: null },
   });
 
-  defineEmits(['update:activeCategory', 'select', 'detail']);
+  defineEmits([
+    'update:activeCategory',
+    'update:searchQuery',
+    'select',
+    'detail',
+  ]);
 
   const cardRefs = ref({});
 
@@ -164,6 +179,17 @@
 
     .sidebar__list-item {
       flex: 0 0 260px;
+    }
+  }
+
+  .sidebar__search {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar__search {
+      display: block;
+      padding: 10px 16px 0;
     }
   }
 

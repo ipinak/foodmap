@@ -29,6 +29,15 @@
       </div>
     </div>
     <div v-else ref="mapEl" class="map-canvas"></div>
+
+    <!-- Floating search bar – desktop only -->
+    <div class="map-search-overlay">
+      <SearchBar
+        :model-value="searchQuery"
+        placeholder="Search places…"
+        @update:model-value="$emit('update:searchQuery', $event)"
+      />
+    </div>
   </div>
 </template>
 
@@ -37,13 +46,15 @@
   import mapboxgl from 'mapbox-gl';
   import 'mapbox-gl/dist/mapbox-gl.css';
   import { CATEGORY_CONFIG } from '../composables/usePois.js';
+  import SearchBar from './SearchBar.vue';
 
   const props = defineProps({
     pois: { type: Array, required: true },
     selectedPoi: { type: Object, default: null },
+    searchQuery: { type: String, default: '' },
   });
 
-  const emit = defineEmits(['select', 'detail']);
+  defineEmits(['select', 'detail', 'update:searchQuery']);
 
   const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN;
   const mapEl = ref(null);
@@ -324,6 +335,21 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+  }
+
+  .map-search-overlay {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 300px;
+    z-index: 10;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.14));
+  }
+
+  @media (max-width: 768px) {
+    .map-search-overlay {
+      display: none;
+    }
   }
 
   .map-canvas {
