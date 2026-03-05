@@ -5,7 +5,13 @@
 }
 
 :root {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -65,16 +71,16 @@ body {
   color-scheme: dark;
 
   /* Brand accent → Racing Red */
-  --fm-accent: #e10600;
+  --fm-accent: #d1003d;
 
   /* Surfaces – layered navy depth */
-  --fm-surface: #000b47;
+  --fm-surface: #01152c;
   /* sidebar: deepest navy   */
-  --fm-bg: #001166;
+  --fm-bg: #01152c;
   /* cards / modals          */
 
   /* Borders – white at low opacity over dark navy */
-  --fm-border: rgba(204, 204, 204, 0.18);
+  --fm-border: #ffffff;
   --fm-border-input: rgba(204, 204, 204, 0.28);
   --fm-border-chip: rgba(204, 204, 204, 0.22);
 
@@ -87,7 +93,7 @@ body {
   --fm-placeholder: #6666aa;
 
   /* Interactive → Racing Red; active chip → Golden Yellow */
-  --fm-interactive: #e10600;
+  --fm-interactive: #d1003d;
   --fm-chip-active: #ffcc00;
 
   /* Scrollbar */
