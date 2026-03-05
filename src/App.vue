@@ -43,9 +43,9 @@
   import SidebarPanel from './components/SidebarPanel.vue';
   import MapView from './components/MapView.vue';
   import PoiDetail from './components/PoiDetail.vue';
-  import { usePois } from './composables/usePois.js';
+  import { usePois, localizedPoi } from './composables/usePois.js';
 
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const { pois, fetchPois, getCategories, filterByCategory } = usePois();
 
   const activeCategory = ref(null);
@@ -60,10 +60,15 @@
     filterByCategory(pois.value, activeCategory.value),
   );
 
-  // Fuse index rebuilt whenever the pool changes
+  // Overlay locale-specific name/description/address
+  const localizedCategoryPois = computed(() =>
+    categoryPois.value.map((poi) => localizedPoi(poi, locale.value)),
+  );
+
+  // Fuse index rebuilt whenever the pool or locale changes
   const fuse = computed(
     () =>
-      new Fuse(categoryPois.value, {
+      new Fuse(localizedCategoryPois.value, {
         keys: [
           { name: 'name', weight: 0.5 },
           { name: 'address', weight: 0.25 },
@@ -77,7 +82,7 @@
 
   const filteredPois = computed(() => {
     const q = searchQuery.value.trim();
-    if (!q) return categoryPois.value;
+    if (!q) return localizedCategoryPois.value;
     return fuse.value.search(q).map((r) => r.item);
   });
 

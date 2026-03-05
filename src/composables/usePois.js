@@ -37,3 +37,18 @@ export function usePois() {
 
   return { pois, loading, error, fetchPois, getCategories, filterByCategory }
 }
+
+/**
+ * Returns a shallow copy of `poi` with name/description/address
+ * replaced by the locale-specific translation, falling back to English.
+ */
+export function localizedPoi(poi, locale) {
+  const tr = poi.translations?.[locale]
+  if (!tr) return poi
+  return {
+    ...poi,
+    name:        tr.name        ?? poi.name,
+    description: tr.description ?? poi.description,
+    address:     tr.address     ?? poi.address,
+  }
+}
