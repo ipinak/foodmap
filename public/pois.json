@@ -1,0 +1,104 @@
+{
+  "pois": [
+    {
+      "id": "1",
+      "name": "Café Avissinia",
+      "category": "cafe",
+      "description": "A beloved Athens institution nestled in the heart of the flea market, serving rich Greek coffee and mezedes since 1975. Catch live laïka music on weekends when the neighbourhood fills with the scent of grilled meat and the sound of bouzouki.",
+      "address": "Kynetou 7, Monastiraki, Athens",
+      "lat": 37.9759,
+      "lng": 23.7231,
+      "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80"
+    },
+    {
+      "id": "2",
+      "name": "Varoulko Seaside",
+      "category": "restaurant",
+      "description": "Michelin-starred seafood restaurant by chef Lefteris Lazarou. Perched above the marina of Mikrolimano, offering breathtaking sea views and exceptional modern Greek cuisine that celebrates the Aegean's finest catch.",
+      "address": "Akti Koumoundourou 54–56, Mikrolimano, Piraeus",
+      "lat": 37.9436,
+      "lng": 23.6426,
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80"
+    },
+    {
+      "id": "3",
+      "name": "Little Kook",
+      "category": "cafe",
+      "description": "A fairy-tale café decorated with spectacular seasonal themes that change every few months. Famous for its elaborate interior design and magical atmosphere that draws both locals and tourists into a world of whimsy.",
+      "address": "Karaiskaki 17, Psyrri, Athens",
+      "lat": 37.9778,
+      "lng": 23.7256,
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80"
+    },
+    {
+      "id": "4",
+      "name": "The Clumsies",
+      "category": "bar",
+      "description": "Ranked among the World's 50 Best Bars. A multi-space bar-restaurant concept that serves creative cocktails in a warm, book-filled environment. Beloved by Athenians for its innovative drinks and unpretentious vibe.",
+      "address": "Praxitelous 30, Athens City Centre",
+      "lat": 37.9790,
+      "lng": 23.7278,
+      "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80"
+    },
+    {
+      "id": "5",
+      "name": "Feyrouz",
+      "category": "restaurant",
+      "description": "Authentic Lebanese cuisine in a vibrant setting in Psyrri. Known for its generous mezze platters, fresh pita bread baked on-site daily, and warm Mediterranean hospitality that makes every visit feel like a family gathering.",
+      "address": "Miaouli 23, Psyrri, Athens",
+      "lat": 37.9770,
+      "lng": 23.7240,
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80"
+    },
+    {
+      "id": "6",
+      "name": "Ariston Bakery",
+      "category": "bakery",
+      "description": "A legendary Athenian bakery operating since 1910. Famous for its tiropita (cheese pie) and spanakopita baked fresh throughout the day. An unmissable spot for a quick and deeply authentic Athenian snack.",
+      "address": "Voulis 10, Syntagma, Athens",
+      "lat": 37.9754,
+      "lng": 23.7327,
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80"
+    },
+    {
+      "id": "7",
+      "name": "Souvlaki Street",
+      "category": "street_food",
+      "description": "The ultimate Athenian street-food experience. Perfectly charred pork skewers wrapped in thick, hand-made pita with tzatziki, tomatoes and red onion. Queue early — supplies run out by midday on weekends.",
+      "address": "Mitropoleos 87, Monastiraki, Athens",
+      "lat": 37.9748,
+      "lng": 23.7254,
+      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80"
+    },
+    {
+      "id": "8",
+      "name": "Baba Au Rum",
+      "category": "bar",
+      "description": "One of Athens' most critically acclaimed cocktail bars. Head bartender Thanos Prunarus crafts visionary drinks inspired by world spirits and seasonal Greek botanicals. The rum collection alone numbers over 400 bottles.",
+      "address": "Klitiou 6, Athens City Centre",
+      "lat": 37.9783,
+      "lng": 23.7301,
+      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80"
+    },
+    {
+      "id": "9",
+      "name": "Kuzina",
+      "category": "restaurant",
+      "description": "A rooftop restaurant with an uninterrupted view of the Acropolis. Chef Aris Tsanaklidis blends traditional Greek flavors with contemporary technique to create a dining experience worthy of the iconic backdrop.",
+      "address": "Adrianou 9, Thissio, Athens",
+      "lat": 37.9762,
+      "lng": 23.7199,
+      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80"
+    },
+    {
+      "id": "10",
+      "name": "Lukumades",
+      "category": "street_food",
+      "description": "A stone's throw from the Acropolis Museum, this tiny counter serves exceptional loukoumades — crispy Greek honey donuts — piping hot, drizzled with Thyme honey and dusted generously with cinnamon and crushed walnuts.",
+      "address": "Makrigianni 3, Acropolis, Athens",
+      "lat": 37.9695,
+      "lng": 23.7287,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
+    }
+  ]
+}
