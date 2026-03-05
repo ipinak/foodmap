@@ -42,12 +42,21 @@
 </template>
 
 <script setup>
-  import { ref, watch, onMounted, onBeforeUnmount } from 'vue';
+  import {
+    ref,
+    watch,
+    onMounted,
+    onBeforeUnmount,
+    h,
+    render,
+    getCurrentInstance,
+  } from 'vue';
   import { useI18n } from 'vue-i18n';
   import mapboxgl from 'mapbox-gl';
   import 'mapbox-gl/dist/mapbox-gl.css';
   import { CATEGORY_CONFIG } from '../composables/usePois.js';
   import SearchBar from './SearchBar.vue';
+  import MapPopup from './MapPopup.vue';
 
   const { t } = useI18n();
 
@@ -58,14 +67,16 @@
     mapStyle: { type: String, default: 'mapbox://styles/mapbox/light-v11' },
   });
 
-  defineEmits(['select', 'detail', 'update:searchQuery']);
+  const emit = defineEmits(['select', 'detail', 'update:searchQuery']);
 
   const mapboxToken = import.meta.env.VITE_MAPBOX_TOKEN;
   const mapEl = ref(null);
+  const { appContext } = getCurrentInstance();
 
   let map = null;
   const markers = {};
   let activePopup = null;
+  let popupContainer = null;
 
   // ── Helpers ────────────────────────────────────────────
 
@@ -78,19 +89,18 @@
     return el;
   }
 
-  function buildPopupHTML(poi) {
-    const cfg = CATEGORY_CONFIG[poi.category] ?? { color: '#888' };
-    const catLabel = t('categories.' + poi.category);
-    return `
-    <div class="mapbox-popup-inner">
-      <img src="${poi.image}" alt="${poi.name}" class="mapbox-popup-img" />
-      <div class="mapbox-popup-body">
-        <span class="mapbox-popup-badge" style="background:${cfg.color}">${catLabel}</span>
-        <strong class="mapbox-popup-name">${poi.name}</strong>
-        <span class="mapbox-popup-addr">${poi.address}</span>
-        <button class="mapbox-popup-details-btn">${t('map.seeDetails')}</button>
-      </div>
-    </div>`;
+  function mountPopupContent(poi) {
+    if (popupContainer) {
+      render(null, popupContainer);
+    }
+    popupContainer = document.createElement('div');
+    const vnode = h(MapPopup, {
+      poi,
+      onDetails: (p) => emit('detail', p),
+    });
+    vnode.appContext = appContext;
+    render(vnode, popupContainer);
+    return popupContainer;
   }
 
   function addMarkers() {
@@ -114,6 +124,7 @@
       activePopup.remove();
       activePopup = null;
     }
+    const content = mountPopupContent(poi);
     activePopup = new mapboxgl.Popup({
       closeButton: true,
       closeOnClick: false,
@@ -122,19 +133,16 @@
       className: 'mapbox-custom-popup',
     })
       .setLngLat([poi.lng, poi.lat])
-      .setHTML(buildPopupHTML(poi))
+      .setDOMContent(content)
       .addTo(map);
 
-    // Popup is in the DOM immediately after addTo(); attach listener directly
-    const btn = activePopup
-      .getElement()
-      ?.querySelector('.mapbox-popup-details-btn');
-    if (btn) {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        emit('select', poi);
-      });
-    }
+    activePopup.on('close', () => {
+      if (popupContainer) {
+        render(null, popupContainer);
+        popupContainer = null;
+      }
+      activePopup = null;
+    });
   }
 
   function updateSelectedMarker(poi) {

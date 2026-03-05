@@ -20,6 +20,8 @@
   "poi": {
     "seeDetails": "Λεπτομέρειες",
     "openMaps": "Άνοιγμα στο Google Maps",
+    "visitWebsite": "Επίσκεψη ιστοτόπου",
+    "visitInstagram": "Προβολή στο Instagram",
     "noResults": "Δεν βρέθηκαν μέρη για αυτή την κατηγορία."
   },
   "map": {

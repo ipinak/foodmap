@@ -9,7 +9,10 @@
       "address": "Aiolou 11, Athina 105 55",
       "lat": 37.9764543295101,
       "lng": 23.72739938192081,
-      "website": "https://cityzenathens.gr/",
+      "website": {
+        "url": "https://cityzenathens.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "City Zen Roof Top",
@@ -27,7 +30,10 @@
       "address": "Athinas 1 & Ermou, Athina 105 54",
       "lat": 37.977092956596586,
       "lng": 23.726073126098775,
-      "website": "https://www.msroofgarden.eu/",
+      "website": {
+        "url": "https://www.msroofgarden.eu/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "MS Roof Garden",
@@ -45,7 +51,10 @@
       "address": "Athinas 11, Athina 105 54",
       "lat": 37.97751866976165,
       "lng": 23.726183439591892,
-      "website": "https://brunchathens.gr/",
+      "website": {
+        "url": "https://brunchathens.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Brunch Factory",
@@ -63,7 +72,10 @@
       "address": "Ermou 78 & Athinas 2, Athina 105 51",
       "lat": 37.976901799896844,
       "lng": 23.72631828192078,
-      "website": "https://www.instagram.com/hyper_astrobar/",
+      "website": {
+        "url": "https://www.instagram.com/hyper_astrobar/",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Hyper Astro Bar",
@@ -81,7 +93,10 @@
       "address": "Skouleniou 1, Athina 105 61",
       "lat": 37.97932710854436,
       "lng": 23.72994964144126,
-      "website": "https://dopiosrestaurant.gr/el/",
+      "website": {
+        "url": "https://dopiosrestaurant.gr/el/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Δόπιος",
@@ -99,7 +114,10 @@
       "address": "Kolokotroni 59, Athina 105 60",
       "lat": 37.977874768899824,
       "lng": 23.728818583769936,
-      "website": "https://www.instagram.com/to_paradosiako/?hl=el",
+      "website": {
+        "url": "https://www.instagram.com/to_paradosiako/?hl=el",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Το Παραδοσιακό",
@@ -117,7 +135,10 @@
       "address": "Pl. Theatrou 2, Athina 105 52",
       "lat": 37.980811488481194,
       "lng": 23.724621568427775,
-      "website": "https://klimataria.gr/en",
+      "website": {
+        "url": "https://klimataria.gr/en",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Κληματαριά",
@@ -135,7 +156,10 @@
       "address": "Kidantidon 32, Athina 118 51",
       "lat": 37.96993916187557,
       "lng": 23.71317813959183,
-      "website": "https://www.tavernaoikonomou.gr/",
+      "website": {
+        "url": "https://www.tavernaoikonomou.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Ταβέρνα Οικονόμου",
@@ -153,7 +177,10 @@
       "address": "Pl. Agion Theodoron 3, Athina 105 61",
       "lat": 37.97946059237312,
       "lng": 23.729638797263192,
-      "website": "https://www.manaritaverna.com/",
+      "website": {
+        "url": "https://www.manaritaverna.com/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Μανάρι",
@@ -171,7 +198,10 @@
       "address": "Kolokotroni 38, Leocharous 40, Athina 105 60",
       "lat": 37.9778465699093,
       "lng": 23.7299301684276,
-      "website": "https://amberathens.gr/en/home/home.html",
+      "website": {
+        "url": "https://amberathens.gr/en/home/home.html",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Amber",
@@ -189,7 +219,10 @@
       "address": "Dragatsaniou 6, Athina 105 61",
       "lat": 37.97997503675877,
       "lng": 23.730860281920943,
-      "website": "https://www.instagram.com/solene.athens/",
+      "website": {
+        "url": "https://www.instagram.com/solene.athens/",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Solene",
@@ -207,7 +240,10 @@
       "address": "Apollonos 4, Athina 105 57",
       "lat": 37.974921661350514,
       "lng": 23.732729839591787,
-      "website": "https://ovio.gr/",
+      "website": {
+        "url": "https://ovio.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Ovio",
@@ -225,7 +261,10 @@
       "address": "Iraklidon 10, Athina 118 51",
       "lat": 37.975278832490126,
       "lng": 23.719120227947812,
-      "website": "https://cinapos.com/",
+      "website": {
+        "url": "https://cinapos.com/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Cinapos",
@@ -243,7 +282,10 @@
       "address": "Plateia Karytsi 2, Athina 105 61",
       "lat": 37.97800879760059,
       "lng": 23.731192426098932,
-      "website": "https://www.instagram.com/blessmefather_athens/?hl=el",
+      "website": {
+        "url": "https://www.instagram.com/blessmefather_athens/?hl=el",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Bless Me Father",
@@ -261,7 +303,10 @@
       "address": "Skouleniou 2, Athina 105 61",
       "lat": 37.9793977220477,
       "lng": 23.729859885619103,
-      "website": "https://odorivermuteria.gr/menu.html",
+      "website": {
+        "url": "https://odorivermuteria.gr/menu.html",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Odori Vermuteria",
@@ -279,7 +324,10 @@
       "address": "Aiolou 27, Athina 105 60",
       "lat": 37.97743509879056,
       "lng": 23.72756198192084,
-      "website": "https://gypsyjungleathens.com/",
+      "website": {
+        "url": "https://gypsyjungleathens.com/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Gypsy Jungle",
@@ -297,7 +345,10 @@
       "address": "Pl. Agiou Georgiou Karitsi 6, Athina 105 61",
       "lat": 37.9781777402799,
       "lng": 23.73169628377,
-      "website": "https://gloriagati.com/en/",
+      "website": {
+        "url": "https://gloriagati.com/en/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Gloria Gati",
@@ -315,7 +366,10 @@
       "address": "Praxitelous 30, Athina 105 61",
       "lat": 37.9791385364345,
       "lng": 23.72973883959202,
-      "website": "https://www.theclumsies.gr/",
+      "website": {
+        "url": "https://www.theclumsies.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "The Clumsies",
@@ -333,7 +387,10 @@
       "address": "Pallados 3, Athina 105 54",
       "lat": 37.97907235036657,
       "lng": 23.726299668427693,
-      "website": "https://jrhacienda.com/the-bar/",
+      "website": {
+        "url": "https://jrhacienda.com/the-bar/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Juan Rodriguez",
@@ -351,7 +408,10 @@
       "address": "Petraki 1, Athina 105 63",
       "lat": 37.97576581675227,
       "lng": 23.73221387027666,
-      "website": "https://thebarinfrontofthebar.gr/",
+      "website": {
+        "url": "https://thebarinfrontofthebar.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Bar in Front of the Bar",
@@ -369,7 +429,10 @@
       "address": "Kalamiotou 4, Athina 105 63",
       "lat": 37.97685357137123,
       "lng": 23.7289024549344,
-      "website": "https://kukos.gr/",
+      "website": {
+        "url": "https://kukos.gr/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Kukos",
@@ -387,7 +450,10 @@
       "address": "Klitiou 6, Athina 105 60",
       "lat": 37.97763356876191,
       "lng": 23.729822010756354,
-      "website": "https://www.babaaurum.com/",
+      "website": {
+        "url": "https://www.babaaurum.com/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Baba Au Rum",
@@ -405,7 +471,10 @@
       "address": "Karagiorgi Servias 10, Athina 105 62",
       "lat": 37.97666946261841,
       "lng": 23.73314794978873,
-      "website": "https://www.instagram.com/stoa.athens/?hl=el",
+      "website": {
+        "url": "https://www.instagram.com/stoa.athens/?hl=el",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Stoa",
@@ -423,7 +492,10 @@
       "address": "Nikis 11, Athina 105 63",
       "lat": 37.97504056109026,
       "lng": 23.73318878192081,
-      "website": "https://www.burgerdiscoclub.com/",
+      "website": {
+        "url": "https://www.burgerdiscoclub.com/",
+        "type": "website"
+      },
       "translations": {
         "el": {
           "name": "Burger Disco Club",
@@ -441,7 +513,10 @@
       "address": "Lekka 23, Athina 105 62",
       "lat": null,
       "lng": null,
-      "website": "https://www.instagram.com/ekei.lekka23/?hl=el",
+      "website": {
+        "url": "https://www.instagram.com/ekei.lekka23/?hl=el",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Εκεί",
@@ -459,7 +534,10 @@
       "address": "Taki 12, Athina 105 54",
       "lat": 37.97872586684013,
       "lng": 23.72399285308531,
-      "website": "https://www.instagram.com/contrabando.athens/?hl=el",
+      "website": {
+        "url": "https://www.instagram.com/contrabando.athens/?hl=el",
+        "type": "instagram"
+      },
       "translations": {
         "el": {
           "name": "Contrabando",

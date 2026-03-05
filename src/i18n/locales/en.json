@@ -20,6 +20,8 @@
   "poi": {
     "seeDetails": "See details",
     "openMaps": "Open in Google Maps",
+    "visitWebsite": "Visit website",
+    "visitInstagram": "View on Instagram",
     "noResults": "No places found for this category."
   },
   "map": {

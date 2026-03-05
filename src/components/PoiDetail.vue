@@ -82,6 +82,54 @@
               </svg>
               {{ t('poi.openMaps') }}
             </a>
+
+            <a
+              v-if="poi.website"
+              :href="poi.website.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="detail-panel__website-btn"
+              :class="{
+                'detail-panel__website-btn--instagram':
+                  poi.website.type === 'instagram',
+              }"
+            >
+              <!-- Instagram icon -->
+              <svg
+                v-if="poi.website.type === 'instagram'"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+              <!-- Globe icon -->
+              <svg
+                v-else
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              {{
+                poi.website.type === 'instagram'
+                  ? t('poi.visitInstagram')
+                  : t('poi.visitWebsite')
+              }}
+            </a>
           </div>
         </div>
       </div>
@@ -219,6 +267,12 @@
     margin: 0 0 20px;
   }
 
+  .detail-panel__coords-map {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
   .detail-panel__gmaps-btn {
     display: inline-flex;
     align-items: center;
@@ -235,6 +289,38 @@
 
   .detail-panel__gmaps-btn:hover {
     background: var(--fm-text);
+  }
+
+  .detail-panel__website-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--fm-interactive);
+    border: 1.5px solid var(--fm-interactive);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      background 0.18s,
+      color 0.18s;
+  }
+
+  .detail-panel__website-btn:hover {
+    background: var(--fm-interactive);
+    color: var(--fm-bg);
+  }
+
+  .detail-panel__website-btn--instagram {
+    color: #c13584;
+    border-color: #c13584;
+  }
+
+  .detail-panel__website-btn--instagram:hover {
+    background: #c13584;
+    color: #fff;
   }
 
   /* Transition */
