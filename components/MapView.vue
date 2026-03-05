@@ -38,6 +38,15 @@
         @update:model-value="$emit('update:searchQuery', $event)"
       />
     </div>
+
+    <!-- Red Bull logo overlay (colour JPG – top/bottom center) -->
+    <div class="map-logo-overlay">
+      <img
+        src="/images/redbull-logo-sm.png"
+        alt="Red Bull"
+        class="map-logo-overlay__img"
+      />
+    </div>
   </div>
 </template>
 
@@ -415,6 +424,67 @@ watch(
 .map-canvas {
   width: 100%;
   height: 100%;
+}
+
+/* Red Bull logo – desktop: top center */
+.map-logo-overlay {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.map-logo-overlay__img {
+  height: 52px;
+  width: auto;
+  display: block;
+  opacity: 0.92;
+}
+
+/* Mobile: move colour logo to bottom center of the map strip */
+@media (max-width: 768px) {
+  .map-logo-overlay {
+    top: auto;
+    bottom: 12px;
+  }
+
+  .map-logo-overlay__img {
+    height: 36px;
+  }
+}
+
+/* SVG logo – desktop: top right */
+.map-logo-overlay-svg {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.map-logo-overlay-svg__img {
+  height: 44px;
+  width: auto;
+  display: block;
+  /* Tint the monochrome SVG with Red Bull red */
+  filter: invert(14%) sepia(93%) saturate(6937%) hue-rotate(2deg)
+    brightness(93%) contrast(108%);
+  opacity: 0.88;
+}
+
+/* Mobile: move SVG logo to bottom right */
+@media (max-width: 768px) {
+  .map-logo-overlay-svg {
+    top: auto;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .map-logo-overlay-svg__img {
+    height: 30px;
+  }
 }
 
 @media (max-width: 768px) {
