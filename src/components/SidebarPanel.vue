@@ -3,7 +3,7 @@
     <div class="sidebar__header">
       <div class="sidebar__brand">
         <span class="sidebar__brand-dot"></span>
-        <span class="sidebar__brand-name">FoodMap</span>
+        <span class="sidebar__brand-name">Athens City Guide by Red Bull</span>
       </div>
       <p class="sidebar__subtitle">
         {{ t('app.subtitle', { count: filteredPois.length }) }}

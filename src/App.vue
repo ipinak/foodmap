@@ -4,7 +4,9 @@
     <header class="app-mobile-header">
       <div class="app-mobile-header__brand">
         <span class="app-mobile-header__dot"></span>
-        <span class="app-mobile-header__name">FoodMap</span>
+        <span class="app-mobile-header__name">
+          Athens City Guide by Red Bull
+        </span>
       </div>
       <p class="app-mobile-header__subtitle">
         {{ t('app.subtitle', { count: filteredPois.length }) }}
