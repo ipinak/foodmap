@@ -14,7 +14,8 @@
     "cafe": "Café",
     "bar": "Bar",
     "bakery": "Bakery",
-    "street_food": "Street Food"
+    "street_food": "Street Food",
+    "club": "Club"
   },
   "poi": {
     "seeDetails": "See details",
