@@ -2,16 +2,16 @@
 export default defineNuxtConfig({
   ssr: false,
 
-  modules: ['@nuxtjs/i18n'],
+  modules: ["@nuxtjs/i18n"],
 
   i18n: {
-    strategy: 'no_prefix',
-    langDir: 'locales',
+    strategy: "no_prefix",
+    langDir: "locales",
     locales: [
-      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
-      { code: 'el', language: 'el-GR', name: 'Ελληνικά', file: 'el.json' },
+      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      { code: "el", language: "el-GR", name: "Ελληνικά", file: "el.json" },
     ],
-    defaultLocale: 'en',
+    defaultLocale: "en",
     detectBrowserLanguage: {
       useCookie: false,
       alwaysRedirect: false,
@@ -21,26 +21,26 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
 
   app: {
     head: {
-      title: 'Athens City Guide by Red Bull',
+      title: "Athens City Guide by Red Bull",
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: '',
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
         },
         {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
         },
       ],
       // Set the default theme before the app boots.
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
       script: [
         {
           innerHTML:
-            "window.FoodMapConfig = window.FoodMapConfig || { theme: 'redbull-light' }",
+            "window.FoodMapConfig = window.FoodMapConfig || { theme: 'redbull' }",
         },
       ],
     },
@@ -56,17 +56,17 @@ export default defineNuxtConfig({
 
   vite: {
     // Keep VITE_ prefix working so MapView.vue's VITE_MAPBOX_TOKEN is exposed.
-    envPrefix: ['VITE_', 'NUXT_'],
+    envPrefix: ["VITE_", "NUXT_"],
     build: {
       rollupOptions: {
         output: {
           manualChunks: {
-            'mapbox-gl': ['mapbox-gl'],
+            "mapbox-gl": ["mapbox-gl"],
           },
         },
       },
     },
   },
 
-  compatibilityDate: '2025-01-01',
+  compatibilityDate: "2025-01-01",
 });
