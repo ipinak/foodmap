@@ -2,171 +2,469 @@
   "pois": [
     {
       "id": "1",
-      "name": "Café Avissinia",
+      "name": "City Zen Roof Top",
       "category": "cafe",
-      "description": "A beloved Athens institution nestled in the heart of the flea market, serving rich Greek coffee and mezedes since 1975. Catch live laïka music on weekends when the neighbourhood fills with the scent of grilled meat and the sound of bouzouki.",
-      "address": "Kynetou 7, Monastiraki, Athens",
-      "lat": 37.9759,
-      "lng": 23.7231,
-      "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
+      "image": "/images/zen.jpg",
+      "description": "Rooftop café and bar offering panoramic views of the Acropolis. A popular spot for coffee, brunch, and cocktails above the historic center of Athens.",
+      "address": "Aiolou 11, Athina 105 55",
+      "lat": 37.9764543295101,
+      "lng": 23.72739938192081,
+      "website": "https://cityzenathens.gr/",
       "translations": {
         "el": {
-          "name": "Καφέ Αβησσυνία",
-          "description": "Ένα αγαπημένο αθηναϊκό στέκι στην καρδιά της υπαίθριας αγοράς, που σερβίρει πλούσιο ελληνικό καφέ και μεζέδες από το 1975. Τα σαββατοκύριακα ακούγεται ζωντανή λαϊκή μουσική, ενώ η γειτονιά γεμίζει με μυρωδιά ψητού κρέατος και ήχους μπουζουκιού.",
-          "address": "Κυνέτου 7, Μοναστηράκι, Αθήνα"
+          "name": "City Zen Roof Top",
+          "description": "Rooftop καφέ και μπαρ με πανοραμική θέα στην Ακρόπολη. Δημοφιλές για καφέ, brunch και κοκτέιλ στο ιστορικό κέντρο της Αθήνας.",
+          "address": "Αιόλου 11, Αθήνα 105 55"
         }
       }
     },
     {
       "id": "2",
-      "name": "Varoulko Seaside",
-      "category": "restaurant",
-      "description": "Michelin-starred seafood restaurant by chef Lefteris Lazarou. Perched above the marina of Mikrolimano, offering breathtaking sea views and exceptional modern Greek cuisine that celebrates the Aegean's finest catch.",
-      "address": "Akti Koumoundourou 54–56, Mikrolimano, Piraeus",
-      "lat": 37.9436,
-      "lng": 23.6426,
-      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+      "name": "MS Roof Garden",
+      "category": "cafe",
+      "image": "/images/MS-Roof-Garden.jpg",
+      "description": "Stylish rooftop café overlooking Monastiraki and the Acropolis, known for brunch, coffee and relaxed drinks.",
+      "address": "Athinas 1 & Ermou, Athina 105 54",
+      "lat": 37.977092956596586,
+      "lng": 23.726073126098775,
+      "website": "https://www.msroofgarden.eu/",
       "translations": {
         "el": {
-          "name": "Varoulko Seaside",
-          "description": "Εστιατόριο θαλασσινών με αστέρι Michelin του σεφ Λευτέρη Λαζάρου. Πάνω από τη μαρίνα του Μικρολίμανου, προσφέρει εντυπωσιακή θέα στη θάλασσα και εξαιρετική σύγχρονη ελληνική κουζίνα που αναδεικνύει τα καλύτερα αλιεύματα του Αιγαίου.",
-          "address": "Ακτή Κουμουνδούρου 54–56, Μικρολίμανο, Πειραιάς"
+          "name": "MS Roof Garden",
+          "description": "Κομψό rooftop καφέ με θέα στο Μοναστηράκι και την Ακρόπολη, γνωστό για brunch, καφέ και χαλαρά ποτά.",
+          "address": "Αθηνάς 1 & Ερμού, Αθήνα 105 54"
         }
       }
     },
     {
       "id": "3",
-      "name": "Little Kook",
+      "name": "Brunch Factory",
       "category": "cafe",
-      "description": "A fairy-tale café decorated with spectacular seasonal themes that change every few months. Famous for its elaborate interior design and magical atmosphere that draws both locals and tourists into a world of whimsy.",
-      "address": "Karaiskaki 17, Psyrri, Athens",
-      "lat": 37.9778,
-      "lng": 23.7256,
-      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80",
+      "image": "/images/Brunch-Factory.jpg",
+      "description": "Modern brunch spot serving specialty coffee, pancakes, eggs and creative breakfast dishes in central Athens.",
+      "address": "Athinas 11, Athina 105 54",
+      "lat": 37.97751866976165,
+      "lng": 23.726183439591892,
+      "website": "https://brunchathens.gr/",
       "translations": {
         "el": {
-          "name": "Little Kook",
-          "description": "Ένα καφέ σαν παραμύθι, διακοσμημένο με εντυπωσιακά εποχικά θέματα που αλλάζουν κάθε λίγους μήνες. Φημισμένο για τον ιδιαίτερο εσωτερικό του χώρο και τη μαγική ατμόσφαιρα που ξεσηκώνει ντόπιους και επισκέπτες σε έναν κόσμο φαντασίας.",
-          "address": "Καραϊσκάκη 17, Ψυρρή, Αθήνα"
+          "name": "Brunch Factory",
+          "description": "Σύγχρονο brunch spot με specialty καφέ, pancakes και δημιουργικά πιάτα πρωινού.",
+          "address": "Αθηνάς 11, Αθήνα 105 54"
         }
       }
     },
     {
       "id": "4",
-      "name": "The Clumsies",
-      "category": "bar",
-      "description": "Ranked among the World's 50 Best Bars. A multi-space bar-restaurant concept that serves creative cocktails in a warm, book-filled environment. Beloved by Athenians for its innovative drinks and unpretentious vibe.",
-      "address": "Praxitelous 30, Athens City Centre",
-      "lat": 37.9790,
-      "lng": 23.7278,
-      "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80",
+      "name": "Hyper Astro Bar",
+      "category": "cafe",
+      "image": "/images/hyper_astrobar.jpg",
+      "description": "Trendy rooftop café and cocktail bar with urban views and a lively evening atmosphere.",
+      "address": "Ermou 78 & Athinas 2, Athina 105 51",
+      "lat": 37.976901799896844,
+      "lng": 23.72631828192078,
+      "website": "https://www.instagram.com/hyper_astrobar/",
       "translations": {
         "el": {
-          "name": "The Clumsies",
-          "description": "Στη λίστα με τα 50 Καλύτερα Μπαρ στον Κόσμο. Ένας πολυχώρος bar-εστιατόριο που σερβίρει δημιουργικά κοκτέιλ σε ζεστό, βιβλιοφόρτωτο περιβάλλον. Αγαπημένο από τους Αθηναίους για τα πρωτοποριακά ποτά και την ανεπιτήδευτη ατμόσφαιρά του.",
-          "address": "Πραξιτέλους 30, Κέντρο Αθήνας"
+          "name": "Hyper Astro Bar",
+          "description": "Μοντέρνο rooftop καφέ και cocktail bar με θέα στην πόλη και ζωντανή βραδινή ατμόσφαιρα.",
+          "address": "Ερμού 78 & Αθηνάς 2, Αθήνα 105 51"
         }
       }
     },
     {
       "id": "5",
-      "name": "Feyrouz",
+      "name": "Dopios",
       "category": "restaurant",
-      "description": "Authentic Lebanese cuisine in a vibrant setting in Psyrri. Known for its generous mezze platters, fresh pita bread baked on-site daily, and warm Mediterranean hospitality that makes every visit feel like a family gathering.",
-      "address": "Miaouli 23, Psyrri, Athens",
-      "lat": 37.9770,
-      "lng": 23.7240,
-      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+      "image": "/images/dopios.jpg",
+      "description": "Modern Greek restaurant focusing on seasonal ingredients and contemporary interpretations of traditional recipes.",
+      "address": "Skouleniou 1, Athina 105 61",
+      "lat": 37.97932710854436,
+      "lng": 23.72994964144126,
+      "website": "https://dopiosrestaurant.gr/el/",
       "translations": {
         "el": {
-          "name": "Feyrouz",
-          "description": "Αυθεντική λιβανέζικη κουζίνα σε ζωντανό χώρο στο Ψυρρή. Γνωστό για τα γενναιόδωρα μεζεδοπιάτα, τις φρεσκοψημένες πίτες που φτιάχνονται επί τόπου καθημερινά και τη ζεστή μεσογειακή φιλοξενία που κάνει κάθε επίσκεψη να μοιάζει με οικογενειακή συνάντηση.",
-          "address": "Μιαούλη 23, Ψυρρή, Αθήνα"
+          "name": "Δόπιος",
+          "description": "Σύγχρονο ελληνικό εστιατόριο με εποχικά υλικά και δημιουργικές εκδοχές παραδοσιακών συνταγών.",
+          "address": "Σκουλενίου 1, Αθήνα 105 61"
         }
       }
     },
     {
       "id": "6",
-      "name": "Ariston Bakery",
-      "category": "bakery",
-      "description": "A legendary Athenian bakery operating since 1910. Famous for its tiropita (cheese pie) and spanakopita baked fresh throughout the day. An unmissable spot for a quick and deeply authentic Athenian snack.",
-      "address": "Voulis 10, Syntagma, Athens",
-      "lat": 37.9754,
-      "lng": 23.7327,
-      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+      "name": "To Paradosiako",
+      "category": "restaurant",
+      "image": "/images/to_paradosiako.jpg",
+      "description": "Traditional Greek tavern known for classic homemade dishes and authentic local flavors.",
+      "address": "Kolokotroni 59, Athina 105 60",
+      "lat": 37.977874768899824,
+      "lng": 23.728818583769936,
+      "website": "https://www.instagram.com/to_paradosiako/?hl=el",
       "translations": {
         "el": {
-          "name": "Αρτοποιείο Αρίστιον",
-          "description": "Ένα θρυλικό αθηναϊκό αρτοποιείο που λειτουργεί από το 1910. Φημισμένο για τη φρεσκοψημένη τυρόπιτα και σπανακόπιτα. Σταθμός για ένα γρήγορο και βαθιά αθηναϊκό σνακ.",
-          "address": "Βουλής 10, Σύνταγμα, Αθήνα"
+          "name": "Το Παραδοσιακό",
+          "description": "Παραδοσιακή ταβέρνα με κλασικά σπιτικά ελληνικά πιάτα και αυθεντικές γεύσεις.",
+          "address": "Κολοκοτρώνη 59, Αθήνα 105 60"
         }
       }
     },
     {
       "id": "7",
-      "name": "Souvlaki Street",
-      "category": "street_food",
-      "description": "The ultimate Athenian street-food experience. Perfectly charred pork skewers wrapped in thick, hand-made pita with tzatziki, tomatoes and red onion. Queue early — supplies run out by midday on weekends.",
-      "address": "Mitropoleos 87, Monastiraki, Athens",
-      "lat": 37.9748,
-      "lng": 23.7254,
-      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80",
+      "name": "Klimataria",
+      "category": "restaurant",
+      "image": "/images/klimataria.jpg",
+      "description": "Historic Athenian tavern famous for traditional Greek cuisine and live music.",
+      "address": "Pl. Theatrou 2, Athina 105 52",
+      "lat": 37.980811488481194,
+      "lng": 23.724621568427775,
+      "website": "https://klimataria.gr/en",
       "translations": {
         "el": {
-          "name": "Souvlaki Street",
-          "description": "Η απόλυτη εμπειρία αθηναϊκού street food. Τέλεια ψημένα σουβλάκια χοιρινού τυλιγμένα σε χειροποίητη χοντρή πίτα με τζατζίκι, ντομάτα και κόκκινο κρεμμύδι. Ελάτε νωρίς — τα αποθέματα εξαντλούνται τα μεσημέρια των Σαββατοκύριακων.",
-          "address": "Μητροπόλεως 87, Μοναστηράκι, Αθήνα"
+          "name": "Κληματαριά",
+          "description": "Ιστορική αθηναϊκή ταβέρνα με παραδοσιακή ελληνική κουζίνα και ζωντανή μουσική.",
+          "address": "Πλ. Θεάτρου 2, Αθήνα 105 52"
         }
       }
     },
     {
       "id": "8",
-      "name": "Baba Au Rum",
-      "category": "bar",
-      "description": "One of Athens' most critically acclaimed cocktail bars. Head bartender Thanos Prunarus crafts visionary drinks inspired by world spirits and seasonal Greek botanicals. The rum collection alone numbers over 400 bottles.",
-      "address": "Klitiou 6, Athens City Centre",
-      "lat": 37.9783,
-      "lng": 23.7301,
-      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80",
+      "name": "Oikonomou Tavern",
+      "category": "restaurant",
+      "image": "/images/oikonomou.webp",
+      "description": "Classic neighborhood tavern in Petralona serving traditional homemade Greek dishes.",
+      "address": "Kidantidon 32, Athina 118 51",
+      "lat": 37.96993916187557,
+      "lng": 23.71317813959183,
+      "website": "https://www.tavernaoikonomou.gr/",
       "translations": {
         "el": {
-          "name": "Baba Au Rum",
-          "description": "Ένα από τα πιο βραβευμένα κοκτέιλ μπαρ της Αθήνας. Ο επικεφαλής μπάρμαν Θάνος Προύναρος δημιουργεί οραματικά ποτά εμπνευσμένα από παγκόσμια αποστάγματα και εποχικά ελληνικά βότανα. Η συλλογή ρούμι αριθμεί πάνω από 400 φιάλες.",
-          "address": "Κλειτίου 6, Κέντρο Αθήνας"
+          "name": "Ταβέρνα Οικονόμου",
+          "description": "Κλασική γειτονική ταβέρνα στα Πετράλωνα με παραδοσιακά σπιτικά ελληνικά πιάτα.",
+          "address": "Κυδαντιδών 32, Αθήνα 118 51"
         }
       }
     },
     {
       "id": "9",
-      "name": "Kuzina",
+      "name": "Manari",
       "category": "restaurant",
-      "description": "A rooftop restaurant with an uninterrupted view of the Acropolis. Chef Aris Tsanaklidis blends traditional Greek flavors with contemporary technique to create a dining experience worthy of the iconic backdrop.",
-      "address": "Adrianou 9, Thissio, Athens",
-      "lat": 37.9762,
-      "lng": 23.7199,
-      "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80",
+      "image": "/images/manari.jpg",
+      "description": "Modern tavern specializing in Greek meat dishes and traditional flavors with a contemporary twist.",
+      "address": "Pl. Agion Theodoron 3, Athina 105 61",
+      "lat": 37.97946059237312,
+      "lng": 23.729638797263192,
+      "website": "https://www.manaritaverna.com/",
       "translations": {
         "el": {
-          "name": "Κουζίνα",
-          "description": "Εστιατόριο οροφής με απεριόριστη θέα στην Ακρόπολη. Ο σεφ Άρης Τσανακλίδης συνδυάζει παραδοσιακές ελληνικές γεύσεις με σύγχρονη τεχνική για μια γαστρονομική εμπειρία αντάξια του εμβληματικού τοπίου.",
-          "address": "Αδριανού 9, Θησείο, Αθήνα"
+          "name": "Μανάρι",
+          "description": "Σύγχρονη ταβέρνα με έμφαση στα ελληνικά κρεατικά και παραδοσιακές γεύσεις.",
+          "address": "Πλ. Αγίων Θεοδώρων 3, Αθήνα 105 61"
         }
       }
     },
     {
       "id": "10",
-      "name": "Lukumades",
-      "category": "street_food",
-      "description": "A stone's throw from the Acropolis Museum, this tiny counter serves exceptional loukoumades — crispy Greek honey donuts — piping hot, drizzled with Thyme honey and dusted generously with cinnamon and crushed walnuts.",
-      "address": "Makrigianni 3, Acropolis, Athens",
-      "lat": 37.9695,
-      "lng": 23.7287,
-      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80",
+      "name": "Amber",
+      "category": "restaurant",
+      "image": "/images/amber.jpg",
+      "description": "Elegant restaurant serving Mediterranean cuisine in a stylish modern setting.",
+      "address": "Kolokotroni 38, Leocharous 40, Athina 105 60",
+      "lat": 37.9778465699093,
+      "lng": 23.7299301684276,
+      "website": "https://amberathens.gr/en/home/home.html",
       "translations": {
         "el": {
-          "name": "Λουκουμάδες",
-          "description": "Ένα βήμα από το Μουσείο Ακρόπολης, αυτός ο μικρός πάγκος σερβίρει εξαιρετικούς λουκουμάδες — τραγανά ελληνικά donuts μελιού — καυτοί, με θυμαρίσιο μέλι, κανέλα και θρυμματισμένα καρύδια.",
-          "address": "Μακρυγιάννη 3, Ακρόπολη, Αθήνα"
+          "name": "Amber",
+          "description": "Κομψό εστιατόριο με μεσογειακή κουζίνα σε σύγχρονο περιβάλλον.",
+          "address": "Κολοκοτρώνη 38, Λεωχάρους 40, Αθήνα 105 60"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "Solene",
+      "category": "restaurant",
+      "image": "/images/solene.jpg",
+      "description": "Trendy modern restaurant known for creative cuisine and contemporary atmosphere.",
+      "address": "Dragatsaniou 6, Athina 105 61",
+      "lat": 37.97997503675877,
+      "lng": 23.730860281920943,
+      "website": "https://www.instagram.com/solene.athens/",
+      "translations": {
+        "el": {
+          "name": "Solene",
+          "description": "Μοντέρνο εστιατόριο με δημιουργική κουζίνα και σύγχρονη αισθητική.",
+          "address": "Δραγατσανίου 6, Αθήνα 105 61"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "name": "Ovio",
+      "category": "restaurant",
+      "image": "/images/ovio.jpg",
+      "description": "Popular Italian-inspired restaurant in central Athens focusing on handmade pasta and fresh ingredients.",
+      "address": "Apollonos 4, Athina 105 57",
+      "lat": 37.974921661350514,
+      "lng": 23.732729839591787,
+      "website": "https://ovio.gr/",
+      "translations": {
+        "el": {
+          "name": "Ovio",
+          "description": "Δημοφιλές εστιατόριο με ιταλική έμπνευση και χειροποίητα ζυμαρικά.",
+          "address": "Απόλλωνος 4, Αθήνα 105 57"
+        }
+      }
+    },
+    {
+      "id": "13",
+      "name": "Cinapos",
+      "category": "restaurant",
+      "image": "/images/Cinapos.jpg",
+      "description": "Casual restaurant in Thissio known for flavorful dishes and relaxed dining near the historic center.",
+      "address": "Iraklidon 10, Athina 118 51",
+      "lat": 37.975278832490126,
+      "lng": 23.719120227947812,
+      "website": "https://cinapos.com/",
+      "translations": {
+        "el": {
+          "name": "Cinapos",
+          "description": "Χαλαρό εστιατόριο στο Θησείο με νόστιμα πιάτα κοντά στο ιστορικό κέντρο.",
+          "address": "Ηρακλειδών 10, Αθήνα 118 51"
+        }
+      }
+    },
+    {
+      "id": "14",
+      "name": "Bless Me Father",
+      "category": "restaurant",
+      "image": "/images/Bless-me-Father.webp",
+      "description": "Casual dining spot near Karitsi Square known for creative dishes and vibrant atmosphere.",
+      "address": "Plateia Karytsi 2, Athina 105 61",
+      "lat": 37.97800879760059,
+      "lng": 23.731192426098932,
+      "website": "https://www.instagram.com/blessmefather_athens/?hl=el",
+      "translations": {
+        "el": {
+          "name": "Bless Me Father",
+          "description": "Casual dining εστιατόριο στην Πλατεία Καρύτση με δημιουργικά πιάτα.",
+          "address": "Πλατεία Καρύτση 2, Αθήνα 105 61"
+        }
+      }
+    },
+    {
+      "id": "15",
+      "name": "Odori Vermuteria",
+      "category": "restaurant",
+      "image": "/images/Odori.jpg",
+      "description": "Stylish vermouth bar and restaurant blending Italian aperitivo culture with Mediterranean cuisine.",
+      "address": "Skouleniou 2, Athina 105 61",
+      "lat": 37.9793977220477,
+      "lng": 23.729859885619103,
+      "website": "https://odorivermuteria.gr/menu.html",
+      "translations": {
+        "el": {
+          "name": "Odori Vermuteria",
+          "description": "Μοντέρνο vermouth bar και εστιατόριο με ιταλική aperitivo κουλτούρα.",
+          "address": "Σκουλενίου 2, Αθήνα 105 61"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "name": "Gypsy Jungle",
+      "category": "restaurant",
+      "image": "/images/Gypsy-Jungle.jpg",
+      "description": "Bohemian-style restaurant and bar known for eclectic decor and relaxed dining.",
+      "address": "Aiolou 27, Athina 105 60",
+      "lat": 37.97743509879056,
+      "lng": 23.72756198192084,
+      "website": "https://gypsyjungleathens.com/",
+      "translations": {
+        "el": {
+          "name": "Gypsy Jungle",
+          "description": "Bohemian εστιατόριο και bar με ιδιαίτερη διακόσμηση και χαλαρή ατμόσφαιρα.",
+          "address": "Αιόλου 27, Αθήνα 105 60"
+        }
+      }
+    },
+    {
+      "id": "17",
+      "name": "Gloria Gati",
+      "category": "restaurant",
+      "image": "/images/Gloria-Gati.jpg",
+      "description": "Modern restaurant near Karitsi Square serving Mediterranean-inspired cuisine.",
+      "address": "Pl. Agiou Georgiou Karitsi 6, Athina 105 61",
+      "lat": 37.9781777402799,
+      "lng": 23.73169628377,
+      "website": "https://gloriagati.com/en/",
+      "translations": {
+        "el": {
+          "name": "Gloria Gati",
+          "description": "Σύγχρονο εστιατόριο στην Πλατεία Καρύτση με μεσογειακή κουζίνα.",
+          "address": "Πλ. Αγίου Γεωργίου Καρύτση 6, Αθήνα 105 61"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "name": "The Clumsies",
+      "category": "bar",
+      "image": "/images/Clumsies.jpg",
+      "description": "World-renowned cocktail bar ranked among the World's 50 Best Bars.",
+      "address": "Praxitelous 30, Athina 105 61",
+      "lat": 37.9791385364345,
+      "lng": 23.72973883959202,
+      "website": "https://www.theclumsies.gr/",
+      "translations": {
+        "el": {
+          "name": "The Clumsies",
+          "description": "Βραβευμένο cocktail bar που βρίσκεται στη λίστα World's 50 Best Bars.",
+          "address": "Πραξιτέλους 30, Αθήνα 105 61"
+        }
+      }
+    },
+    {
+      "id": "19",
+      "name": "Juan Rodriguez",
+      "category": "bar",
+      "image": "/images/Juan-Rodriguez.webp",
+      "description": "Lively cocktail bar inspired by Latin American culture and flavors.",
+      "address": "Pallados 3, Athina 105 54",
+      "lat": 37.97907235036657,
+      "lng": 23.726299668427693,
+      "website": "https://jrhacienda.com/the-bar/",
+      "translations": {
+        "el": {
+          "name": "Juan Rodriguez",
+          "description": "Ζωντανό cocktail bar με επιρροές από τη λατινοαμερικανική κουλτούρα.",
+          "address": "Παλλάδος 3, Αθήνα 105 54"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "name": "Bar in Front of the Bar",
+      "category": "bar",
+      "image": "/images/Bar-in-Front-of-the-Bar.webp",
+      "description": "Creative cocktail bar known for innovative drinks and minimal design.",
+      "address": "Petraki 1, Athina 105 63",
+      "lat": 37.97576581675227,
+      "lng": 23.73221387027666,
+      "website": "https://thebarinfrontofthebar.gr/",
+      "translations": {
+        "el": {
+          "name": "Bar in Front of the Bar",
+          "description": "Cocktail bar γνωστό για δημιουργικά ποτά και minimal αισθητική.",
+          "address": "Πετράκη 1, Αθήνα 105 63"
+        }
+      }
+    },
+    {
+      "id": "21",
+      "name": "Kukos",
+      "category": "bar",
+      "image": "/images/kukos.jpg",
+      "description": "Stylish cocktail bar in the heart of Athens with a lively nightlife atmosphere.",
+      "address": "Kalamiotou 4, Athina 105 63",
+      "lat": 37.97685357137123,
+      "lng": 23.7289024549344,
+      "website": "https://kukos.gr/",
+      "translations": {
+        "el": {
+          "name": "Kukos",
+          "description": "Κομψό cocktail bar στο κέντρο της Αθήνας με έντονη νυχτερινή ζωή.",
+          "address": "Καλαμιώτου 4, Αθήνα 105 63"
+        }
+      }
+    },
+    {
+      "id": "22",
+      "name": "Baba Au Rum",
+      "category": "bar",
+      "image": "/images/babaaurum.jpg",
+      "description": "Award-winning rum and cocktail bar known for its creative mixology and large rum collection.",
+      "address": "Klitiou 6, Athina 105 60",
+      "lat": 37.97763356876191,
+      "lng": 23.729822010756354,
+      "website": "https://www.babaaurum.com/",
+      "translations": {
+        "el": {
+          "name": "Baba Au Rum",
+          "description": "Βραβευμένο cocktail bar με μεγάλη συλλογή ρούμι και δημιουργική mixology.",
+          "address": "Κλειτίου 6, Αθήνα 105 60"
+        }
+      }
+    },
+    {
+      "id": "23",
+      "name": "Stoa",
+      "category": "club",
+      "image": null,
+      "description": "Energetic nightclub in central Athens hosting DJs and late-night dance events.",
+      "address": "Karagiorgi Servias 10, Athina 105 62",
+      "lat": 37.97666946261841,
+      "lng": 23.73314794978873,
+      "website": "https://www.instagram.com/stoa.athens/?hl=el",
+      "translations": {
+        "el": {
+          "name": "Stoa",
+          "description": "Νυχτερινό club στο κέντρο της Αθήνας με DJ sets και έντονη nightlife σκηνή.",
+          "address": "Καραγιώργη Σερβίας 10, Αθήνα 105 62"
+        }
+      }
+    },
+    {
+      "id": "24",
+      "name": "Burger Disco Club",
+      "category": "club",
+      "image": "/images/Burger-Disco-Club.avif",
+      "description": "Unique nightlife venue combining burgers, cocktails and disco music.",
+      "address": "Nikis 11, Athina 105 63",
+      "lat": 37.97504056109026,
+      "lng": 23.73318878192081,
+      "website": "https://www.burgerdiscoclub.com/",
+      "translations": {
+        "el": {
+          "name": "Burger Disco Club",
+          "description": "Νυχτερινός χώρος που συνδυάζει burgers, κοκτέιλ και disco μουσική.",
+          "address": "Νίκης 11, Αθήνα 105 63"
+        }
+      }
+    },
+    {
+      "id": "25",
+      "name": "Ekei",
+      "category": "club",
+      "image": "/images/ekei.webp",
+      "description": "Trendy nightlife spot in central Athens known for music, drinks and a vibrant crowd.",
+      "address": "Lekka 23, Athina 105 62",
+      "lat": null,
+      "lng": null,
+      "website": "https://www.instagram.com/ekei.lekka23/?hl=el",
+      "translations": {
+        "el": {
+          "name": "Εκεί",
+          "description": "Trendy club στο κέντρο της Αθήνας με μουσική και δυνατή βραδινή ατμόσφαιρα.",
+          "address": "Λέκκα 23, Αθήνα 105 62"
+        }
+      }
+    },
+    {
+      "id": "26",
+      "name": "Contrabando",
+      "category": "club",
+      "image": "/images/Contrabando.jpg",
+      "description": "Popular underground club in Psyrri known for late-night music and energetic parties.",
+      "address": "Taki 12, Athina 105 54",
+      "lat": 37.97872586684013,
+      "lng": 23.72399285308531,
+      "website": "https://www.instagram.com/contrabando.athens/?hl=el",
+      "translations": {
+        "el": {
+          "name": "Contrabando",
+          "description": "Δημοφιλές club στο Ψυρρή με έντονη μουσική και δυνατά πάρτι μέχρι αργά.",
+          "address": "Τάκη 12, Αθήνα 105 54"
         }
       }
     }

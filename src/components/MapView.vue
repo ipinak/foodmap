@@ -254,11 +254,35 @@
     padding: 0;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    background: var(--fm-bg);
+    border: 1px solid var(--fm-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  }
+
+  /* Arrow / tip – match popup background for all anchor positions */
+  .mapbox-custom-popup.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: var(--fm-bg);
+  }
+  .mapbox-custom-popup.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-bottom-color: var(--fm-bg);
+  }
+  .mapbox-custom-popup.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: var(--fm-bg);
+  }
+  .mapbox-custom-popup.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: var(--fm-bg);
+  }
+  .mapbox-custom-popup.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+  .mapbox-custom-popup.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+    border-bottom-color: var(--fm-bg);
+  }
+  .mapbox-custom-popup.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+  .mapbox-custom-popup.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+    border-top-color: var(--fm-bg);
   }
 
   .mapbox-custom-popup .mapboxgl-popup-close-button {
-    color: #fff;
+    color: var(--fm-text);
     font-size: 18px;
     padding: 4px 8px;
     background: rgba(0, 0, 0, 0.4);

@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 export const CATEGORY_CONFIG = {
   restaurant: { label: 'Restaurant', color: '#E74C3C', bg: '#fdecea' },
@@ -6,6 +6,7 @@ export const CATEGORY_CONFIG = {
   bar:         { label: 'Bar',        color: '#8E44AD', bg: '#f5eafb' },
   bakery:      { label: 'Bakery',     color: '#27AE60', bg: '#e9f7ef' },
   street_food: { label: 'Street Food',color: '#2980B9', bg: '#eaf4fb' },
+  club:        { label: 'Club',       color: '#f0392B', bg: '#fbe9e7' },
 }
 
 export function usePois() {

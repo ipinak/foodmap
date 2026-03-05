@@ -106,3 +106,41 @@ body {
   /* Scrollbar */
   --fm-scrollbar: rgba(204, 204, 204, 0.25);
 }
+
+/* Red Bull Light – Racing Red / Golden Yellow / Navy text on white */
+.theme-redbull-light {
+  color-scheme: light;
+
+  /* Brand accent → Racing Red */
+  --fm-accent: #e10600;
+
+  /* Surfaces – clean white with a faint cool tint */
+  --fm-surface: #f0f2f8;
+  /* sidebar / panel background  */
+  --fm-bg: #ffffff;
+  /* card / modal background     */
+
+  /* Borders – navy at low opacity over white */
+  --fm-border: rgba(0, 17, 102, 0.14);
+  --fm-border-input: rgba(0, 17, 102, 0.2);
+  --fm-border-chip: rgba(0, 17, 102, 0.16);
+
+  /* Text – deep navy primary, mid-navy secondary */
+  --fm-text: #000b47;
+  /* primary                 */
+  --fm-text-secondary: #334488;
+  /* subtitles, addresses    */
+  --fm-text-muted: #445599;
+  /* descriptions, secondary */
+  --fm-text-subtle: #6677aa;
+  /* icons, meta items       */
+  --fm-placeholder: #99aac4;
+  /* input placeholder       */
+
+  /* Interactive → Racing Red; active chip → Golden Yellow */
+  --fm-interactive: #e10600;
+  --fm-chip-active: #ffcc00;
+
+  /* Scrollbar */
+  --fm-scrollbar: rgba(0, 17, 102, 0.18);
+}
