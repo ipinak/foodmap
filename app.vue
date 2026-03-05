@@ -46,13 +46,6 @@
   const { t, locale } = useI18n();
   const { pois, fetchPois, getCategories, filterByCategory } = usePois();
 
-  // ── Theme ─────────────────────────────────────────────
-  // Reads from window.FoodMapConfig (set in nuxt.config.ts app.head.script).
-  // External consumers can override before the app loads:
-  //   window.FoodMapConfig = { theme: { accent: '#0070f3' } }
-  //
-  // Built-in presets: 'redbull', 'redbull-light'
-
   const config =
     (typeof window !== 'undefined' ? window.FoodMapConfig : null) ?? {};
   const theme = config.theme ?? {};
