@@ -40,34 +40,27 @@
 </template>
 
 <script setup>
-  import { ref, computed, onMounted } from 'vue';
-  import { useI18n } from 'vue-i18n';
   import Fuse from 'fuse.js';
-  import SidebarPanel from './components/SidebarPanel.vue';
-  import MapView from './components/MapView.vue';
-  import PoiDetail from './components/PoiDetail.vue';
-  import { usePois, localizedPoi } from './composables/usePois.js';
+  import { localizedPoi } from '~/composables/usePois.js';
 
   const { t, locale } = useI18n();
   const { pois, fetchPois, getCategories, filterByCategory } = usePois();
 
   // ── Theme ─────────────────────────────────────────────
-  // `theme` accepts either:
-  //   • A preset name string  → applies the matching CSS class (.theme-<name>)
-  //   • A plain object        → inlines individual CSS custom properties
+  // Reads from window.FoodMapConfig (set in nuxt.config.ts app.head.script).
+  // External consumers can override before the app loads:
+  //   window.FoodMapConfig = { theme: { accent: '#0070f3' } }
   //
-  // Built-in presets: 'redbull'
-  //
-  // Examples:
-  //   window.FoodMapConfig = { theme: 'redbull' }
-  //   window.FoodMapConfig = { theme: { accent: '#0070f3', interactive: '#0070f3' } }
-  //   <App theme="redbull" />
-  //   <App :theme="{ accent: '#0070f3' }" />
+  // Built-in presets: 'redbull', 'redbull-light'
+
+  const config =
+    (typeof window !== 'undefined' ? window.FoodMapConfig : null) ?? {};
+  const theme = config.theme ?? {};
 
   // Mapbox style paired to each built-in preset.
-  // Object themes can also supply a `mapStyle` key directly.
   const PRESET_MAP_STYLES = {
     redbull: 'mapbox://styles/mapbox/dark-v11',
+    'redbull-light': 'mapbox://styles/mapbox/light-v11',
   };
   const DEFAULT_MAP_STYLE = 'mapbox://styles/mapbox/light-v11';
   const THEME_PROP_MAP = {
@@ -86,31 +79,26 @@
     scrollbar: '--fm-scrollbar',
   };
 
-  const props = defineProps({
-    // string → preset name; object → token overrides
-    theme: { type: [String, Object], default: () => ({}) },
-  });
-
   // CSS class applied when `theme` is a preset name string
   const themeClass = computed(() =>
-    typeof props.theme === 'string' ? `theme-${props.theme}` : null,
+    typeof theme === 'string' ? `theme-${theme}` : null,
   );
 
   // Inline vars applied when `theme` is a token-override object
   const themeVars = computed(() => {
-    if (typeof props.theme !== 'object' || !props.theme) return {};
+    if (typeof theme !== 'object' || !theme) return {};
     const vars = {};
     for (const [key, cssVar] of Object.entries(THEME_PROP_MAP)) {
-      if (props.theme[key]) vars[cssVar] = props.theme[key];
+      if (theme[key]) vars[cssVar] = theme[key];
     }
     return vars;
   });
 
   // Mapbox base style – derived from the preset name or an explicit key in an object theme
   const mapStyle = computed(() => {
-    if (typeof props.theme === 'string')
-      return PRESET_MAP_STYLES[props.theme] ?? DEFAULT_MAP_STYLE;
-    return props.theme?.mapStyle ?? DEFAULT_MAP_STYLE;
+    if (typeof theme === 'string')
+      return PRESET_MAP_STYLES[theme] ?? DEFAULT_MAP_STYLE;
+    return theme?.mapStyle ?? DEFAULT_MAP_STYLE;
   });
 
   const activeCategory = ref(null);

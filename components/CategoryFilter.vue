@@ -51,7 +51,7 @@
     .category-filter {
       flex-wrap: nowrap;
       overflow-x: auto;
-      padding: 10px 16px 0;
+      padding: 10px 10px;
       gap: 8px;
       scrollbar-width: none;
     }
