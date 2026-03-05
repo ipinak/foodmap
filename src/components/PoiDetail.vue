@@ -80,7 +80,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              Open in Google Maps
+              {{ t('poi.openMaps') }}
             </a>
           </div>
         </div>
@@ -91,7 +91,10 @@
 
 <script setup>
   import { computed } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import { CATEGORY_CONFIG } from '../composables/usePois.js';
+
+  const { t } = useI18n();
 
   const props = defineProps({
     poi: { type: Object, default: null },
@@ -101,9 +104,7 @@
   const catColor = computed(
     () => CATEGORY_CONFIG[props.poi?.category]?.color ?? '#888',
   );
-  const catLabel = computed(
-    () => CATEGORY_CONFIG[props.poi?.category]?.label ?? props.poi?.category,
-  );
+  const catLabel = computed(() => t('categories.' + props.poi?.category));
 </script>
 
 <style scoped>

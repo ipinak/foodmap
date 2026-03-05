@@ -15,14 +15,14 @@
     <input
       class="search-bar__input"
       type="text"
-      :placeholder="placeholder"
+      :placeholder="placeholder ?? t('search.placeholder')"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
     />
     <button
       v-if="modelValue"
       class="search-bar__clear"
-      aria-label="Clear search"
+      :aria-label="t('search.clearAria')"
       @click="$emit('update:modelValue', '')"
     >
       <svg
@@ -41,9 +41,13 @@
 </template>
 
 <script setup>
+  import { useI18n } from 'vue-i18n';
+
+  const { t } = useI18n();
+
   defineProps({
     modelValue: { type: String, default: '' },
-    placeholder: { type: String, default: 'Search places…' },
+    placeholder: { type: String, default: null },
   });
   defineEmits(['update:modelValue']);
 </script>

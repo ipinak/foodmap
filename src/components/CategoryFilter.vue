@@ -5,7 +5,7 @@
       :class="{ active: modelValue === null }"
       @click="$emit('update:modelValue', null)"
     >
-      All
+      {{ t('filter.all') }}
     </button>
     <button
       v-for="cat in categories"
@@ -19,13 +19,16 @@
       "
       @click="$emit('update:modelValue', cat)"
     >
-      {{ config[cat]?.label ?? cat }}
+      {{ t('categories.' + cat) }}
     </button>
   </div>
 </template>
 
 <script setup>
+  import { useI18n } from 'vue-i18n';
   import { CATEGORY_CONFIG } from '../composables/usePois.js';
+
+  const { t } = useI18n();
 
   defineProps({
     categories: { type: Array, required: true },

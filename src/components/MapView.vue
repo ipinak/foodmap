@@ -14,9 +14,9 @@
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <h3>Mapbox Token Required</h3>
+        <h3>{{ t('map.tokenRequired') }}</h3>
         <p>
-          Create a <code>.env.local</code> file in the project root and add:
+          {{ t('map.tokenInstructions', { file: '.env.local' }) }}
         </p>
         <pre>VITE_MAPBOX_TOKEN=your_public_token</pre>
         <a
@@ -24,7 +24,7 @@
           target="_blank"
           rel="noopener"
         >
-          Get a free token →
+          {{ t('map.getToken') }}
         </a>
       </div>
     </div>
@@ -34,7 +34,6 @@
     <div class="map-search-overlay">
       <SearchBar
         :model-value="searchQuery"
-        placeholder="Search places…"
         @update:model-value="$emit('update:searchQuery', $event)"
       />
     </div>
@@ -43,10 +42,13 @@
 
 <script setup>
   import { ref, watch, onMounted, onBeforeUnmount } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import mapboxgl from 'mapbox-gl';
   import 'mapbox-gl/dist/mapbox-gl.css';
   import { CATEGORY_CONFIG } from '../composables/usePois.js';
   import SearchBar from './SearchBar.vue';
+
+  const { t } = useI18n();
 
   const props = defineProps({
     pois: { type: Array, required: true },
@@ -75,18 +77,16 @@
   }
 
   function buildPopupHTML(poi) {
-    const cfg = CATEGORY_CONFIG[poi.category] ?? {
-      color: '#888',
-      label: poi.category,
-    };
+    const cfg = CATEGORY_CONFIG[poi.category] ?? { color: '#888' };
+    const catLabel = t('categories.' + poi.category);
     return `
     <div class="mapbox-popup-inner">
       <img src="${poi.image}" alt="${poi.name}" class="mapbox-popup-img" />
       <div class="mapbox-popup-body">
-        <span class="mapbox-popup-badge" style="background:${cfg.color}">${cfg.label}</span>
+        <span class="mapbox-popup-badge" style="background:${cfg.color}">${catLabel}</span>
         <strong class="mapbox-popup-name">${poi.name}</strong>
         <span class="mapbox-popup-addr">${poi.address}</span>
-        <button class="mapbox-popup-details-btn">See details</button>
+        <button class="mapbox-popup-details-btn">${t('map.seeDetails')}</button>
       </div>
     </div>`;
   }
@@ -130,7 +130,7 @@
     if (btn) {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        emit('detail', poi);
+        emit('select', poi);
       });
     }
   }

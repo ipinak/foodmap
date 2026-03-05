@@ -1,0 +1,30 @@
+{
+  "app": {
+    "subtitle": "{count} places in Athens"
+  },
+  "search": {
+    "placeholder": "Search places…",
+    "clearAria": "Clear search"
+  },
+  "filter": {
+    "all": "All"
+  },
+  "categories": {
+    "restaurant": "Restaurant",
+    "cafe": "Café",
+    "bar": "Bar",
+    "bakery": "Bakery",
+    "street_food": "Street Food"
+  },
+  "poi": {
+    "seeDetails": "See details",
+    "openMaps": "Open in Google Maps",
+    "noResults": "No places found for this category."
+  },
+  "map": {
+    "tokenRequired": "Mapbox Token Required",
+    "tokenInstructions": "Create a {file} file in the project root and add:",
+    "getToken": "Get a free token →",
+    "seeDetails": "See details"
+  }
+}

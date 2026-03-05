@@ -36,7 +36,7 @@
       </p>
       <p class="poi-card__desc">{{ poi.description }}</p>
       <button class="poi-card__cta" @click.stop="$emit('detail', poi)">
-        See details
+        {{ t('poi.seeDetails') }}
       </button>
     </div>
   </div>
@@ -44,7 +44,10 @@
 
 <script setup>
   import { computed } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import { CATEGORY_CONFIG } from '../composables/usePois.js';
+
+  const { t } = useI18n();
 
   const props = defineProps({
     poi: { type: Object, required: true },
@@ -55,9 +58,7 @@
   const catColor = computed(
     () => CATEGORY_CONFIG[props.poi.category]?.color ?? '#888',
   );
-  const catLabel = computed(
-    () => CATEGORY_CONFIG[props.poi.category]?.label ?? props.poi.category,
-  );
+  const catLabel = computed(() => t('categories.' + props.poi.category));
 </script>
 
 <style scoped>

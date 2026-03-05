@@ -6,7 +6,7 @@
         <span class="sidebar__brand-name">FoodMap</span>
       </div>
       <p class="sidebar__subtitle">
-        {{ filteredPois.length }} places in Athens
+        {{ t('app.subtitle', { count: filteredPois.length }) }}
       </p>
     </div>
 
@@ -43,7 +43,7 @@
         />
       </div>
       <div v-if="filteredPois.length === 0" class="sidebar__empty">
-        No places found for this category.
+        {{ t('poi.noResults') }}
       </div>
     </div>
   </aside>
@@ -51,9 +51,12 @@
 
 <script setup>
   import { ref, watch } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import CategoryFilter from './CategoryFilter.vue';
   import PoiCard from './PoiCard.vue';
   import SearchBar from './SearchBar.vue';
+
+  const { t } = useI18n();
 
   const props = defineProps({
     filteredPois: { type: Array, required: true },

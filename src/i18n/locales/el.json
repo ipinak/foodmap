@@ -1,0 +1,30 @@
+{
+  "app": {
+    "subtitle": "{count} μέρη στην Αθήνα"
+  },
+  "search": {
+    "placeholder": "Αναζήτηση μερών…",
+    "clearAria": "Εκκαθάριση αναζήτησης"
+  },
+  "filter": {
+    "all": "Όλα"
+  },
+  "categories": {
+    "restaurant": "Εστιατόριο",
+    "cafe": "Καφέ",
+    "bar": "Μπαρ",
+    "bakery": "Αρτοποιείο",
+    "street_food": "Φαγητό Δρόμου"
+  },
+  "poi": {
+    "seeDetails": "Λεπτομέρειες",
+    "openMaps": "Άνοιγμα στο Google Maps",
+    "noResults": "Δεν βρέθηκαν μέρη για αυτή την κατηγορία."
+  },
+  "map": {
+    "tokenRequired": "Απαιτείται Token Mapbox",
+    "tokenInstructions": "Δημιουργήστε αρχείο {file} στη ρίζα του έργου και προσθέστε:",
+    "getToken": "Αποκτήστε δωρεάν token →",
+    "seeDetails": "Λεπτομέρειες"
+  }
+}

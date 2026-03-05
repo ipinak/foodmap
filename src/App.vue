@@ -7,7 +7,7 @@
         <span class="app-mobile-header__name">FoodMap</span>
       </div>
       <p class="app-mobile-header__subtitle">
-        {{ filteredPois.length }} places in Athens
+        {{ t('app.subtitle', { count: filteredPois.length }) }}
       </p>
     </header>
 
@@ -38,12 +38,14 @@
 
 <script setup>
   import { ref, computed, onMounted } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import Fuse from 'fuse.js';
   import SidebarPanel from './components/SidebarPanel.vue';
   import MapView from './components/MapView.vue';
   import PoiDetail from './components/PoiDetail.vue';
   import { usePois } from './composables/usePois.js';
 
+  const { t } = useI18n();
   const { pois, fetchPois, getCategories, filterByCategory } = usePois();
 
   const activeCategory = ref(null);
