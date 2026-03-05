@@ -44,6 +44,20 @@
     padding: 16px 16px 0;
   }
 
+  @media (max-width: 768px) {
+    .category-filter {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 16px 0;
+      gap: 8px;
+      scrollbar-width: none;
+    }
+
+    .category-filter::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   .filter-chip {
     padding: 5px 14px;
     border-radius: 20px;

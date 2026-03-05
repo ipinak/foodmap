@@ -331,6 +331,14 @@
     height: 100%;
   }
 
+  @media (max-width: 768px) {
+    .map-container {
+      flex: none;
+      height: 45vh;
+      width: 100%;
+    }
+  }
+
   .map-no-token {
     width: 100%;
     height: 100%;

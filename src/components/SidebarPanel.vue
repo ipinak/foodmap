@@ -81,6 +81,16 @@
     overflow: hidden;
   }
 
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      min-width: unset;
+      height: 55vh;
+      border-right: none;
+      border-top: 1px solid #e8e8e6;
+    }
+  }
+
   .sidebar__header {
     padding: 20px 16px 12px;
     border-bottom: 1px solid #e8e8e6;
@@ -136,6 +146,25 @@
   .sidebar__list::-webkit-scrollbar-thumb {
     background: #ddd;
     border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar__list {
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 12px 16px 16px;
+      gap: 12px;
+      scrollbar-width: none;
+    }
+
+    .sidebar__list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sidebar__list-item {
+      flex: 0 0 260px;
+    }
   }
 
   .sidebar__empty {

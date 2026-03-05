@@ -89,6 +89,25 @@
     overflow: hidden;
   }
 
+  @media (max-width: 768px) {
+    .poi-card__image-wrap {
+      height: 110px;
+    }
+
+    .poi-card__desc {
+      display: none;
+    }
+
+    .poi-card__body {
+      padding: 10px 12px 12px;
+    }
+
+    .poi-card__name {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+  }
+
   .poi-card__image {
     width: 100%;
     height: 100%;

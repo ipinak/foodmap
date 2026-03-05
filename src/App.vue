@@ -1,5 +1,16 @@
 <template>
   <div class="app">
+    <!-- Mobile-only top header -->
+    <header class="app-mobile-header">
+      <div class="app-mobile-header__brand">
+        <span class="app-mobile-header__dot"></span>
+        <span class="app-mobile-header__name">FoodMap</span>
+      </div>
+      <p class="app-mobile-header__subtitle">
+        {{ filteredPois.length }} places in Athens
+      </p>
+    </header>
+
     <SidebarPanel
       :filtered-pois="filteredPois"
       :categories="categories"
@@ -68,6 +79,64 @@
   @media (max-width: 768px) {
     .app {
       flex-direction: column;
+    }
+  }
+
+  .app-mobile-header {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .app-mobile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      order: 0;
+      flex: none;
+      padding: 10px 16px;
+      background: #f7f7f5;
+      border-bottom: 1px solid #e8e8e6;
+    }
+
+    .app-mobile-header__brand {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .app-mobile-header__dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #e74c3c;
+      flex-shrink: 0;
+    }
+
+    .app-mobile-header__name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #111;
+      letter-spacing: -0.4px;
+    }
+
+    .app-mobile-header__subtitle {
+      margin: 0;
+      font-size: 12px;
+      color: #888;
+    }
+  }
+
+  /* Map first (order 1), sidebar below (order 2) on mobile */
+  @media (max-width: 768px) {
+    .app :deep(.map-container) {
+      order: 1;
+    }
+    .app :deep(.sidebar) {
+      order: 2;
+    }
+    /* Hide the duplicate header inside sidebar on mobile */
+    .app :deep(.sidebar__header) {
+      display: none;
     }
   }
 </style>
