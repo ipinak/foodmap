@@ -92,6 +92,19 @@
     return vars;
   });
 
+  // Apply the theme class + any inline vars to <html> so that the
+  // body background (and the area behind the iOS status bar) inherits
+  // the correct surface color instead of the default white.
+  useHead(() => ({
+    htmlAttrs: {
+      class: themeClass.value ?? undefined,
+      style:
+        Object.entries(themeVars.value)
+          .map(([k, v]) => `${k}:${v}`)
+          .join(';') || undefined,
+    },
+  }));
+
   // Mapbox base style – derived from the preset name or an explicit key in an object theme
   const mapStyle = computed(() => {
     if (typeof theme === 'string')

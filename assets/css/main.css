@@ -54,6 +54,7 @@
   --fm-scrollbar: #dddddd;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
