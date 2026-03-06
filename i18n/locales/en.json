@@ -3,7 +3,7 @@
     "subtitle": "{count} places in Athens"
   },
   "search": {
-    "placeholder": "Search places…",
+    "placeholder": "Search...",
     "clearAria": "Clear search"
   },
   "filter": {
