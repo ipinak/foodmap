@@ -29,6 +29,32 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "theme-color",
+          content: "#01142C",
+        },
+        {
+          name: "description",
+          content:
+            "Red Bull City Guide. Discover the best restaurants, bars, and hidden spots.",
+        },
+        { name: "theme-color", content: "#e10600" },
+        { property: "og:title", content: "Athens City Guide by Red Bull" },
+        {
+          property: "og:description",
+          content:
+            "Explore the best restaurants, bars and hidden spots in Athens.",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: "/images/redbull_share.jpg" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Athens City Guide by Red Bull" },
+        {
+          name: "twitter:description",
+          content:
+            "Explore the best restaurants, bars and hidden spots in Athens.",
+        },
+        { name: "twitter:image", content: "/images/redbull_share.jpg" },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
